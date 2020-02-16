@@ -1,73 +1,937 @@
-body{
- font-family: 'Niconne', cursive; 
+body {
+  font-family: "Josefin Sans", sans-serif;
 }
-.navigation{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  font-family: "Lora", serif;
 }
-#logo-image{
-    width: 20%;
+#logo-image {
+  width: 70px;
 }
-#logo-span{
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 40px;
-    color: white;
+#logo-span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 30px;
+  color: white;
+  font-family: "Lora", serif;
 }
-.design-a-navigation{
-    display: inline-block;
-    margin: 20px;
-    font-size: 34px;
-    color: white;
+.design-a-navigation {
+  margin: 20px;
+  font-size: 20px;
+  color: white;
 }
-@media (max-width: 1600px){
-    .design-a-navigation{
-        margin-left: 50px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
+
+a:hover {
+  text-decoration: none;
+  color: rgba(211, 211, 211, 0.9);
 }
-@media (max-width: 1080px){
-    .design-a-navigation{
-        margin-left: 2px;
-        font-size: 24px;
-    }
+.first-section {
+  background-image: url(img/Eiffel\Tower_GettyImages-1005348968.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
 }
-a:hover{
-    text-decoration: none;
-    color: rgba(211, 211, 211, 0.9);
+#main-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 72px;
+  background: rgba(211, 211, 211, 0.6);
+  font-family: "Lora", serif;
 }
-.first-section{
-    background-image: url(img/Eiffel\ Tower_GettyImages-1005348968.jpg);
-    min-height: 100vh;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
+@media (max-width: 991px) {
+  #main-heading {
+    width: 100%;
+    text-align: center;
+  }
+}
+#subheading {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(211, 211, 211, 0.5);
+}
+.journey-button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 6vh;
+  font-size: 30px;
+}
+@media (max-width: 1000px) {
+  .journey-button {
+    top: 75%;
+  }
+}
+#tours {
+  min-height: 50vh;
+  position: relative;
+}
+
+.holidays-box {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 2;
+}
+@media (max-width: 992px) {
+  .holidays-box {
+    position: static;
+    transform: translateX(0);
+  }
+}
+
+#balloons {
+  position: relative;
+  min-height: 40vh;
+  background-image: url(img/1-hour-hot-air-balloon.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s;
+}
+#balloons:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+#mountains {
+  position: relative;
+  min-height: 40vh;
+  background-image: url(img/canadian-mountain-network.jpg);
+  background-size: cover;
+  background-position: right;
+  transition: all 0.5s;
+}
+#mountains:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+#beach {
+  position: relative;
+  min-height: 40vh;
+  background-image: url(img/AdobeStock_63055160-2560x1707.jpeg);
+  background-size: cover;
+  background-position: left;
+  transition: all 0.5s;
+}
+#beach:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.image-text-holiday {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%);
+  color: white;
+  font-size: 30px;
+}
+
+@media (max-width: 992px) {
+  #arrow-text {
+    position: static;
+    transform: translateX(0);
+    bottom: 0;
+  }
+}
+#arrow-image {
+  display: inline-block;
+  vertical-align: sub;
+}
+.arrow-div-text {
+  font-size: 30px;
+  text-align: center;
+}
+#other-tours {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  color: black;
+  font-family: "Lora", serif;
+}
+#other-tours:hover {
+  color: rgba(211, 211, 211, 0.9);
+}
+#discover-horizons {
+  min-height: 28vh;
+}
+#discover-horizons-h {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+@media (max-width: 991px) {
+  #discover-horizons-h {
+    text-align: center;
+  }
+}
+#our-services {
+  min-height: 50vh;
+}
+#mountains-image2 {
+  width: 90%;
+  display: block;
+  margin: auto;
+  box-shadow: 2px 2px 7px 3px #a1a1a1;
+}
+h2 {
+  font-size: 36px;
+  font-family: "Lora", serif;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media (max-width: 992px) {
+  .div-discover-horizons {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+.our-services-div {
+  min-height: 200px;
+  width: 90%;
+  margin: auto;
+  border: 6px solid #757575;
+  background: white;
+  transition: all 0.5s;
+  padding: 5px;
+}
+.container-for-icon {
+  min-height: 200px;
+  margin-right: 20px;
+}
+.block-icons-headings {
+  font-size: 20px;
+  font-weight: bold;
+}
+.our-services-div:hover {
+  border: 6px solid #ababab;
+  box-shadow: 9px 11px 19px 0px rgba(109, 109, 109, 0.83);
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+#hot-tours {
+  min-height: 100vh;
+}
+.hot-tours-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 7px 3px #fff;
+}
+.hot-tours-spain {
+  background-image: url(img/ca.jpg);
+}
+.hot-tours-venice {
+  background-image: url(img/Gondola-ride-on-the-Grand-Canal-in-Venice.jpg);
+}
+.hot-tours-krakow {
+  background-image: url(img/beznazwy_panorama1a.jpg);
+}
+.hot-tours-hawaii {
+  background-image: url(img/5d7a9edb240000c92b78babf.jpeg);
+}
+.hot-tours-paris {
+  background-image: url(img/fraqnce.jpg);
+}
+.hot-tours-row {
+  background: #e7e7e7;
+  padding: 10px;
+  margin-bottom: 40px;
+  box-shadow: 5px 2px 5px grey;
+}
+.inform-tours {
+  padding: 0px 60px;
+}
+.border-div {
+  border: 4px white dotted;
+  padding: 10px;
+}
+.hot-tour-price {
+  font-size: 30px;
+}
+@media (max-width: 1200px) {
+  .inform-tours {
+    padding: 5px;
+  }
+}
+.hot-tours-text {
+  text-align: justify;
+}
+#people-mission {
+  min-height: 55vh;
+}
+.people-div {
+  height: 300px;
+  background-color: #e7e7e7;
+  position: relative;
+  box-shadow: 5px 2px 5px grey;
+}
+.people-image {
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: solid 3px white;
+  margin-top: 15px;
+  transition: all 0.5s;
+}
+.people-image:hover {
+  transform: translate(-50%) scale(1.1);
+  transition: all 0.5s;
+}
+.people-div:hover {
+  background-color: #e7e7e7;
+  animation-name: flash_border;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flash_border {
+  0% {
+    background-color: #e7e7e7;
+  }
+  50% {
+    background-color: #bbb;
+  }
+  100% {
+    background-color: #e7e7e7;
+  }
+}
+
+.name {
+  top: 60%;
+  left: 50%;
+  min-width: 200px;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.a-for-telephone {
+  text-decoration: none;
+  color: #424242;
+  text-shadow: 1px 1px 2px rgba(7, 7, 7, 0.46);
+  font-size: 24px;
+}
+@media (max-width: 767px) {
+  .people-image {
+    left: 5%;
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 767px) {
+  .people-image:hover {
+    transform: translate(0%) scale(1.1);
+    transition: all 0.5s;
+  }
+}
+@media (max-width: 767px) {
+  .name {
+    right: 5%;
+    top: 10%;
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 767px) {
+  .people-div {
+    height: 200px;
+  }
+}
+#book-tour {
+  min-height: 60vh;
+  background-image: url(img/flight.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 20px;
+}
+#first-class-h {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+#book-tour-div {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(7, 7, 7, 0.46);
+}
+#book-tour-paragraph {
+  max-width: 700px;
+}
+#book-tour-button {
+  width: 300px;
+  height: 6vh;
+  font-size: 30px;
+}
+#what-people-say {
+  min-height: 45vh;
+}
+
+.feedback-div {
+  height: 300px;
+  background-color: #b3b3b3;
+
+  position: relative;
+}
+@media (max-width: 991px) {
+  .feedback-div {
+    margin-top: 30px;
+    height: 250px;
+  }
+}
+.feedback-img {
+  width: 150px;
+  border-radius: 50%;
+  border: solid 5px #b3b3b3;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20%;
+}
+.feedback-paragraph {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  text-align: justify;
+}
+@media (max-width: 991px) {
+  .feedback-paragraph {
+    top: 45%;
+  }
+}
+.feedback-name {
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(7, 7, 7, 0.46);
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__wrapper {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slider__item {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+@media (max-width: 980px) {
+  #slides {
+    display: none;
+  }
+}
+.slider__control {
+  position: absolute;
+  top: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  height: 50px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slider__control_show {
+  display: flex;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9;
+}
+
+.slider__control_left {
+  left: 0;
+}
+
+.slider__control_right {
+  right: 0;
+}
+
+.slider__control::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.slider__control_left::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.slider__control_right::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+#latest-blog-posts {
+  min-height: 65vh;
+}
+.blog-post {
+  height: 400px;
+  background-color: blanchedalmond;
+  position: relative;
+  transition: all 0.5s;
+  box-shadow: 5px 2px 5px grey;
+}
+.blog-post:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.blog-post-info {
+  position: absolute;
+  width: 80%;
+  background-color: rgba(204, 204, 204, 0.8);
+  height: 100px;
+  bottom: -5%;
+  transform: translateX(-50%);
+  left: 50%;
+  font-size: 24px;
+  padding: 5px;
+  text-align: center;
+}
+.slider-button {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  background: #cccccc;
+  outline: none;
+}
+.slider-button:hover,
+.slider-button:active,
+.slider-button:focus {
+  background: #757575;
+  outline: none;
+}
+#button-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.button-phone {
+  display: none;
+}
+@media (max-width: 991px) {
+  .button-phone {
+    display: block;
+  }
+}
+@media (max-width: 991px) {
+  #blog-post-phone {
+    display: none;
+  }
+}
+#img1-slider {
+  background-image: url("img/336_ilio-mare-beach-hotel_177075.jpeg");
+  background-size: cover;
+}
+#img2-slider {
+  background-image: url("img/186583876.jpg");
+  background-size: cover;
+}
+#img3-slider {
+  background-image: url("img/163857-3.jpg");
+  background-size: cover;
+}
+#img4-slider {
+  background-image: url("img/the-mountain-heavens.jpg");
+  background-size: cover;
+}
+#img5-slider {
+  background-image: url("img/t2-4.jpg");
+  background-size: cover;
+}
+#img6-slider {
+  background-image: url("img/1-29.jpg");
+  background-size: cover;
+}
+#img7-slider {
+  background-image: url("img/birds-eye-view-sani-resort-greece-01.jpg");
+  background-size: cover;
+}
+footer {
+  min-height: 35vh;
+}
+.icon-inform {
+  width: 200px;
+  height: 50px;
+  position: relative;
+}
+.icon-inform-a {
+  color: white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.icon-div {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+.footer-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.footer-h {
+  color: white;
+  margin-top: 35px;
+}
+.blog-post-a {
+  color: white;
+}
+.social-icon-div {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 50%;
+}
+.social-icon-div:hover {
+  background-color: #bbb;
+}
+.social-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#footer-logo {
+  width: 70px;
+}
+#logo-p-footer {
+  font-family: "Lora", serif;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: #fff;
+}
+.rights {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#about-us {
+  min-height: 50vh;
+  background-image: url(img/palm-tree-27.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.heading-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.breadcrumbs-h {
+  color: #fff;
+}
+.breadcrumbs {
+  list-style: none;
+  color: rgba(211, 211, 211, 0.9);
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%);
+}
+.breadcrumbs-a {
+  color: #fff;
+}
+.breadcrumbs-a:hover {
+  color: rgba(211, 211, 211, 0.9);
+}
+#why-choose-us {
+  min-height: 50vh;
+}
+#choose-us-img {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 2px 2px 7px 3px #a1a1a1;
+}
+@media (max-width: 991px) {
+  #choose-us-img {
     position: relative;
-    z-index: 1;
+  }
 }
-#main-heading{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 100px;
-    background: rgba(211, 211, 211, 0.6);
+#choose-us-h {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-@media (max-width: 1100px){
-    #main-heading{
-        font-size: 65px;
-    }
+@media (max-width: 991px) {
+  #choose-us-h {
+    text-align: center;
+  }
 }
-@media (max-width: 640px){
-    #main-heading{
-        font-size: 70px;
-        left:0;
-        right: 0;
-        transform: translateX(0);
-        text-align: center;
-    }
+.progress-bar-div {
+  background-color: #e7e7e7;
+  margin: 10px;
+  padding: 10px;
+  margin-left: 0px;
+  box-shadow: 2px 2px 7px 3px #a1a1a1;
+}
+#destinations {
+  min-height: 70vh;
+}
+.destinations-image {
+  height: 25vh;
+  background-size: cover;
+  background-position: center;
+  border: 6px solid #757575;
+}
+.countries {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -7%;
+  font-size: 24px;
+  width: 300px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(7, 7, 7, 0.46);
+  color: white;
+}
+.destinations-image:hover {
+  border: 6px solid #ababab;
+  box-shadow: 9px 11px 19px 0px rgba(109, 109, 109, 0.83);
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+#testimonials {
+  min-height: 55vh;
+}
+.client-icon {
+  width: 80px;
+  border-radius: 50%;
+}
+.client-name {
+  margin-left: 25px;
+  margin-top: 15px;
+}
+.client-testimonials {
+  margin-top: 20px;
+  text-align: justify;
+}
+.testimonials-container {
+  box-shadow: 9px 11px 19px 0px rgba(109, 109, 109, 0.83);
+  padding: 20px;
+}
+@media (max-width: 991px) {
+  .phone-hide-div {
+    display: none;
+  }
+}
+#statistics {
+  min-height: 30vh;
+  background-image: url("img/x9GTZS.jpg");
+  background-position: center;
+  background-size: cover;
+  font-size: 72px;
+  color: white;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+#tours-section {
+  min-height: 50vh;
+  background-image: url(img/biobased-roads-bitumen.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+#hot-tours2 {
+  min-height: 210vh;
+}
+.button-tours-nav:focus,
+.button-tours-nav:hover,
+.button-tours-nav:active {
+  outline: 0 !important;
+  border: 0 !important;
+}
+#gallery-section {
+  min-height: 50vh;
+  background-image: url(img/Waterfalls-trees-mountains-nature-landscape_3840x2160.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  width: 100%;
+}
+.available-a::before {
+  content: "|";
+  margin: 10px;
+}
+.available-a:hover::before {
+  content: "|";
+  margin: 10px;
+  color: #b3b3b3;
+}
+#gallery-nav-div {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.gallery-nav {
+  font-size: 30px;
+  color: #b3b3b3;
+}
+@media (max-width: 991px) {
+  .gallery-nav {
+    font-size: 20px;
+  }
+}
+.gallery-img {
+  width: 100%;
+  height: 300px;
+  background-image: url("img/20181012054607_910573305_2445_0.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+.gallery-p {
+  font-size: 20px;
+  color: #bbb;
+}
+.gallery-img:hover {
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+.button-load-more {
+  width: 150px;
+  margin-bottom: 20px;
+}
+#photos-section {
+  min-height: 100vh;
+}
+#blog-section {
+  min-height: 50vh;
+  background-image: url(img/tnc_69881045.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  width: 100%;
+}
+.blog-post-div {
+  box-shadow: 2px 3px 5px 0px rgba(109, 109, 109, 0.83);
+  padding: 20px;
+}
+.scale-up-hor-center {
+  animation: scale-up-hor-center 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@keyframes scale-up-hor-center {
+  0% {
+    transform: scaleX(0.4);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.blog-time {
+  position: absolute;
+  bottom: 30%;
+  left: 0%;
+  width: 120px;
+  height: 70px;
+  background-color: #fff;
+  border: 4px solid #ababab;
+  border-left: 0px;
+}
+.time-span {
+  position: absolute;
+  bottom: 50%;
+  margin-left: 20px;
+}
+#contact-section {
+  min-height: 50vh;
+  background-image: url(img/peyzazhi-priroda-vid-mesta.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  width: 100%;
+}
+#get-contact {
+  min-height: 70vh;
+}
+.contact-input {
+  border-width: 2px;
+  border-color: #cccccc;
+  border-style: solid;
+  padding: 11px;
+  font-size: 20px;
+  text-align: left;
+  box-shadow: inset 0px 0px 4px 0px rgba(42, 42, 42, 0.4);
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .contact-input {
+    margin-top: 10px;
+  }
+}
+#input-textarea {
+  resize: none;
+  margin-top: 20px;
+}
+.send-form-btn {
+  font-size: 20px;
+  width: 150px;
+}
+@media (max-width: 991px) {
+  .send-form-btn {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 991px) {
+  #rights-div {
+    display: block !important;
+  }
 }
